@@ -16,7 +16,7 @@ jobs:
       run: echo "SUCCESS"
  change-pr-name:
   needs: test
-  runs-on: ubuntu-18-04
+  runs-on: ubuntu-18.04
   steps:
     - name: Change PR name
       run: |
