@@ -9,5 +9,26 @@ jobs:
          curl \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/rililinx/test_gha/pulls
+ test:
+  runs-on: ubuntu-18-04
+  steps:
+    - name: Some test
+      run: true
+ change-pr-name:
+  needs: test
+  runs-on: ubuntu-18-04
+  steps:
+    - name: Change PR name
+      run: |
+        echo ${{ env. GITHUB_REF}}
+        #curl \
+        #-X PATCH \
+        #-H "Accept: application/vnd.github.v3+json" \
+        #https://api.github.com/repos/rililinx/test_gha/${{ env. GITHUB_REF}}/42 \
+        #-d '{"title":"Test successfull"}'
+
+
+
+      
           
 
