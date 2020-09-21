@@ -4,12 +4,9 @@ jobs:
  create-pr:
   runs-on: ubuntu-18.04
   steps:
-    -  name: Create  Pull Request
+    -  name: List  Pull Request
        run: |
-          curl \
-            -X POST \
-            -H "Authorization:token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/rililinx/test_gha/pulls \
-            -d '{"title":"Test PR","head":"head","base":"base"}'
+         curl \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/rililinx/test_gha/pulls
 
