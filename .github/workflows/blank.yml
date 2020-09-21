@@ -2,8 +2,7 @@ on:
   push
 jobs:
  create-pr:
-  runs-on:
-    ubuntu-18.04
+  runs-on: ubuntu-18.04
   steps:
     -  name: Create  Pull Request
        run: |
