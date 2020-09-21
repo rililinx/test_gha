@@ -20,7 +20,7 @@ jobs:
   steps:
     - name: Change PR name
       run: |
-        echo ${{ env. GITHUB_REF}}
+        echo ${env.GITHUB_REF}
         #curl \
         #-X PATCH \
         #-H "Accept: application/vnd.github.v3+json" \
